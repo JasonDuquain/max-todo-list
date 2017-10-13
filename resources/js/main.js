@@ -8,3 +8,9 @@ var completeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:x
 
 // User clicked on the add button
 // If there is any text inside the item field, add that text to the todo list
+document.getElementById('add').addEventListener('click', function() {
+    var value = document.getElementById('item').value;
+    if (value) {
+        
+    }
+});
