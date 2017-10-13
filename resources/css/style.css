@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+body {
+    background: #edf0f1;
+    padding: 80px 0 0 0;
+}
+
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.noFill {
+    fill: none;
+}
+
+header {
+    width: 100%;
+    
+}
+
+header input {
+
+}
+
+header input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+
+}
+
+header button svg {
+
+}
+
+header button svg .fill {
+    fill: #25b99a;
+}
+
+.container {
+
+}
+
+ul.todo {
+
+}
+
+ul.todo li {
+
+}
+
+ul.todo li:last-of-type {
+
+}
+
+ul.todo li .buttons {
+
+}
+
+ul.todo li .buttons button {
+
+}
+
+ul.todo li .buttons button:last-of-type:before {
+    content: '';
+
+}
+
+ul.todo li .buttons button svg {
+
+}
+
+ul.todo li .buttons button.complete svg {
+
+}
+
+ul.todo#completed li .buttons button.complete svg {
+
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
+
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+
+}
+
+ul.todo#completed li .buttons button.complete svg .fill {
+
+}
+
+ul.todo li .buttons button svg .fill {
+    transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill {
+    fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg .fill {
+    fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill {
+    fill: #25b99a;
+}
+
+ul.todo#completed {
+
+}
+
+ul.todo#completed:before {
+    content: '';
+
+}
+
+ul.todo#todo:empty:after {
+    //content: 'You have nothing to-do!';
+
+}
+
+ul.todo#completed:empty:after {
+    //content: 'You have yet to complete any tasks.';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+
+}
