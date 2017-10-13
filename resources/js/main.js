@@ -10,7 +10,84 @@ var completeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:x
 // If there is any text inside the item field, add that text to the todo list
 document.getElementById('add').addEventListener('click', function() {
     var value = document.getElementById('item').value;
-    if (value) {
-        
-    }
+    if (value) addItemTodo(value);
+    document.getElementById('item').value = '';
 });
+
+function removeItem() {
+    this.parentNode.parentNode.remove();
+}
+
+function completeItem() {
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+    var id = parent.id;
+    
+    //check if item should be added to completed or readded to todo
+    var target = (id === 'todo') ? document.getElementById('completed') : document.getElementById('todo');
+    
+    item.remove();
+    target.prepend(item);
+    
+}
+
+function addItemTodo(text) {
+    var list = document.getElementById('todo');
+    
+    var item = document.createElement('li');
+    item.innerText = text;
+    
+    var buttons = document.createElement('div');
+    buttons.classList.add('buttons');
+    
+    var remove = document.createElement('button');
+    remove.classList.add('remove');
+    remove.innerHTML = removeSVG;
+    
+    // add click evt for removing item
+    remove.addEventListener('click', removeItem);
+    
+    var complete = document.createElement('button');
+    complete.classList.add('add');
+    complete.innerHTML = completeSVG;
+    
+    //add click evt for completing task
+    complete.addEventListener('click', completeItem);
+    
+    buttons.append(remove);
+    buttons.append(complete);
+    item.append(buttons);
+    
+    list.prepend(item);
+    
+    document.getElementById('item').focus();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

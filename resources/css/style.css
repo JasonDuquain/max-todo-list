@@ -185,7 +185,6 @@ ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
 }
 /* END - reverse the background and icon color on hover */
 
-
 ul.todo#completed li .buttons button.complete svg .fill {
   fill: #fff;
 }
@@ -207,26 +206,37 @@ ul.todo li .buttons button.complete svg .fill {
 }
 
 
-
 ul.todo#completed {
-
+    position: relative;
+    padding: 60px 0 0 0;
 }
 
 ul.todo#completed:before {
     content: '';
+  width: 150px; /* border between todo and complted */
+  height: 1px;
+  background: #d8e5e0;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin: 0 0 0 -75px; /* fix centering */
 
 }
 
 ul.todo#todo:empty:after {
-    //content: 'You have nothing to-do!';
+    content: 'You have nothing to-do!';
 
 }
 
 ul.todo#completed:empty:after {
-    //content: 'You have yet to complete any tasks.';
+    content: 'You have yet to complete any tasks.';
 }
 
 ul.todo#todo:after,
 ul.todo#completed:after {
-
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
 }
